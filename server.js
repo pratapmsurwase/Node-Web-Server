@@ -34,7 +34,12 @@ app.get('/about',  (req, res)  => {
     welcome: 'WelCome to my site About'
   });
   });
-
+app.get('/project', (req, res)  => {
+  res.render('project.hbs' , {
+    pageTitle: 'Home Page of Project',
+  welcome: 'WelCome to Project Site'
+});
+});
    hbs.registerHelper('getCurrentYear',  () => {
       return new Date().getFullYear();
    });
